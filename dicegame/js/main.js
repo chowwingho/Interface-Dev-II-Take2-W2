@@ -53,12 +53,16 @@ if (diceRoll > 5) {
    changeDiceImg.innerHTML = `<img src="img/dice${diceRoll}.svg" alt=""></img>`
    
    
-   if (diceRoll > 5) {
+   if (diceRoll === 6) {
       let outputMessage = "You Win!!";
       const diceValue = document.getElementById(`rollOutput`);  
       diceValue.innerHTML = `You rolled: ${diceRoll}. ${outputMessage}`;
     }
-  }
+    const changeButtonText = document.getElementById(`reRoll`);
+    changeButtonText.innerHTML = 'Reroll';
+    
+   }
+
 
   document.getElementById('reRoll').addEventListener(`click`, diceRoll);
 
